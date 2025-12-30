@@ -1,0 +1,23 @@
+:root {
+  --primary-dark: whitesmoke;
+  --bg-dark: #111111;
+  --primary-light: #272727;
+  --bg-light: whitesmoke;
+  --highlight: #00a8cc;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  /* overflow-x: hidden; */
+}
+.dark {
+  color: var(--bg-light);
+  background-color: var(--primary-light);
+}

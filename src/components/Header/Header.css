@@ -1,0 +1,47 @@
+header{
+  /* position: fixed; */
+  min-height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  /* background-color: aliceblue; */
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h1 > span {
+  color: #00a8cc;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: bolder;
+  gap: 20px;
+}
+
+/* nav li:hover {
+  color: var(--highlight);
+  transform: scale(1.1);
+  transition: 1s ease;
+} */
+
+#themeBtn{
+  width: 40px;
+  height: 40px;
+}
+
+#themeBtn:hover{
+  cursor: pointer;
+}
+
+

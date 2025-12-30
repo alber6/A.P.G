@@ -1,0 +1,91 @@
+section {
+  scroll-margin-top: 80px; /* altura del navbar */
+}
+
+#home{
+  display: flex;
+  gap: 20px;
+  background-color: #ebebeb;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.dark #home, .dark .services-card{
+  background-color: var(--bg-dark);
+}
+#home > div{
+  text-align: center;
+  padding: 10px;
+}
+
+#home > img {
+  border-radius: 50%;
+}
+
+#services{
+  min-height: 80vh;
+  background-image: url("/public/images/fondo.jpg");
+  /* background: linear-gradient(135deg, #c8dbf7 0%, #639bf4 100%); */
+  background-size: contain;
+  /* PARA QUE EL FONDO NO SE MUEVA AL HACER SCROLL */
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 30px;
+}
+#services > h1 {
+  color: var(--bg-light);
+}
+#services ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.services-card{
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  width: 500px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(rgb(255, 255, 255) 5px 5px 5px);
+}
+
+/* #services > ul > li { */
+  /*“Quiero que este elemento tenga este tamaño principal de inicio (en este caso 350 px) antes de ajustar o distribuir el espacio */
+  /* flex-basis: 300px; */
+  /* Si el contenedor es más grande y flex-grow está en 1, se estirarán para llenar el espacio extra. */
+  /* flex-grow: 1; } */
+.services-card:hover {
+     /* cuando pasas el ratón por encima, la imagen aumenta */
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+@media screen and (max-width: 630px) {
+  #home > img {
+    width: 250px;
+}
+.services-card{
+  height: 200px;
+  width: 400px;
+}
+}
+
+@media screen and (max-width: 500px) {
+  #home{
+  display: flex;
+  flex-direction: column;
+}
+.services-card{
+  height: 250px;
+  width: 300px;
+}
+}
