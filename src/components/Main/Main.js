@@ -8,9 +8,10 @@ const AboutIt = () =>{
   <div>
     <h1>${data.name}</h1>
     <p>${data.aboutIt}</p>
-    <a href="mailto:${data.email}?subject=Solicitud de Presupuesto - APG" style="text-decoration: none;">
-      ${Button("btn", "Solicitar presupuesto", "")}
-    </a>
+    <a href="mailto:${data.email}?subject=Solicitud%20de%20Presupuesto%20-%20APG" 
+     style="text-decoration: none; display: block;">
+      ${Button("btn", "Solicitar presupuesto por Email", "")}
+  </a>
     <a href="https://wa.me/${data.phoneNumber.replace(/\s+/g, '')}?text=Hola, estoy interesado en solicitar un presupuesto para una instalación eléctrica." target="_blank" style="text-decoration: none;">
     ${Button("btn", "Solicitar por WhatsApp", "")}
   </a>
