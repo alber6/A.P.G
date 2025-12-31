@@ -1,9 +1,15 @@
 :root {
   --primary-dark: #000000;
-  --bg-dark: rgb(0, 0, 0);
-  --primary-light: rgb(255, 255, 255);
+  --bg-dark: #000000;
+  --primary-light: #ffffff;
   --bg-light: #ffffff;
-  --highlight: #00a8cc;
+  --highlight: #3b82f6;
+  --gradient-start: #3b82f6;
+  --gradient-end: #8b5cf6;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(59, 130, 246, 0.15);
+  --accent-light: #f8fafc;
+  --accent-dark: #0f172a;
 }
 
 *{
@@ -13,11 +19,13 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
-  /* overflow-x: hidden; */
+  letter-spacing: -0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .white {
   color: var(--bg-dark);
-  background-color: var(--primary-light);
+  background-color: var(--bg-light);
 }

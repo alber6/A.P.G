@@ -1,108 +1,262 @@
 section {
-  scroll-margin-top: 80px; /* altura del navbar */
+  scroll-margin-top: 80px;
 }
 
 #home{
   display: flex;
-  gap: 20px;
-  background-color: var(--bg-dark);
+  gap: 60px;
+  background-color: #000000;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 80px 40px;
   color: var(--bg-light);
+  min-height: 60vh;
 }
-.white #home, .white .services-card{
-  background-color: var(--bg-light);
+
+.white #home{
+  background-color: #ffffff;
   color: var(--bg-dark);
 }
+
+.white .services-card{
+  background-color: white;
+  color: var(--bg-dark);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 #home > div{
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease;
+}
+
+#home > div h2{
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff, #e0e7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.white #home > div h2{
+  background: linear-gradient(135deg, #000000, #334155);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#home > div p{
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.8;
 }
 
 #home > img {
   width: 300px;
-  height: 200px;
+  height: 380px;
+  object-fit: contain;       
 }
+
 #home > #white-logo {
   display: none;
 }
+
 .white #home > #dark-logo {
   display: none;
 }
+
 .white #home > #white-logo {
   display: block;
-  width: 400px;
-  height: 220px;
+  width: 300px;
+  height: 380px;
 }
 
-.white #services {
-  background-image: url(/public/images/fondoWhite.jpg);
-  background-size: contain;
-}
 #services{
   min-height: 80vh;
-  background-image: url("/public/images/fondo.jpg");
-  /* background: linear-gradient(135deg, #c8dbf7 0%, #639bf4 100%); */
-  background-size: contain;
-  /* PARA QUE EL FONDO NO SE MUEVA AL HACER SCROLL */
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 30px;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+#services::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  top: -250px;
+  right: -250px;
+  pointer-events: none;
+}
+
+.white #services {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.white #services::before {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+}
+
+#services > h2{
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.white #services > h2{
+  color: var(--bg-dark);
 }
 
 #services ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .services-card{
-  background-color: var(--bg-dark);
-  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
-  height: 200px;
-  width: 500px;
-  padding: 20px;
-  transition: all 0.3s ease-in-out;
-  filter: drop-shadow(rgb(255, 255, 255) 5px 5px 5px);
+  min-height: 220px;
+  padding: 40px 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   color: var(--bg-light);
+  position: relative;
+  overflow: hidden;
 }
 
-/* #services > ul > li { */
-  /*“Quiero que este elemento tenga este tamaño principal de inicio (en este caso 350 px) antes de ajustar o distribuir el espacio */
-  /* flex-basis: 300px; */
-  /* Si el contenedor es más grande y flex-grow está en 1, se estirarán para llenar el espacio extra. */
-  /* flex-grow: 1; } */
+.white .services-card{
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.services-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.services-card:hover::before {
+  transform: scaleX(1);
+}
+
+.services-card h3{
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.services-card p{
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
 .services-card:hover {
-     /* cuando pasas el ratón por encima, la imagen aumenta */
-    transform: scale(1.1);
-    transition: 1s;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
-@media screen and (max-width: 630px) {
+.white .services-card:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home{
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+  
+  #home > div h2{
+    font-size: 2.2rem;
+  }
+  
   #home > img {
-    width: 250px;
-}
-.services-card{
-  height: 200px;
-  width: 400px;
-}
+    width: 280px;
+    height: 190px;
+  }
+  
+  #services{
+    padding: 60px 20px;
+  }
+  
+  #services > h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  #services ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .services-card{
+    min-height: 200px;
+    padding: 30px 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  #home{
-  display: flex;
-  flex-direction: column;
-}
-.services-card{
-  height: 250px;
-  width: 300px;
-}
+  #home > div h2{
+    font-size: 1.8rem;
+  }
+  
+  .white #home > #white-logo {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .services-card{
+    min-height: 180px;
+  }
 }
