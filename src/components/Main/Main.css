@@ -8,7 +8,7 @@ section {
   background-color: #000000;
   align-items: center;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 20px 30px;
   color: var(--bg-light);
   min-height: 60vh;
 }

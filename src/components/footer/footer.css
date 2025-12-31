@@ -48,100 +48,12 @@ footer::before {
   line-height: 1.7;
 }
 
-#contacto{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px 20px;
-  text-align: center;
-}
-
-footer > div > section {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 10px;
-  width: 220px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-footer > div > section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-footer > div > section:hover::before {
-  transform: scaleX(1);
-}
-
-.white footer > div > section {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-footer > div > section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-
-.white footer > div > section:hover {
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
-}
-
-footer > div > section h4{
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-footer > div > section p,
-footer > div > section a{
-  font-size: 0.95rem;
-  opacity: 0.85;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-footer > div > section a{
-  color: inherit;
-  text-decoration: none;
-}
-
-footer > div > section a:hover{
-  opacity: 1;
-  color: var(--highlight);
-}
 
 @media screen and (max-width: 768px) {
   footer{
     padding: 40px 20px 30px;
   }
-  
   #presupuesto h3{
     font-size: 1.5rem;
-  }
-  
-  #contacto{
-    gap: 20px;
-    padding: 30px 10px 10px;
-  }
-  
-  footer > div > section {
-    width: 200px;
-    padding: 25px 15px;
   }
 }
