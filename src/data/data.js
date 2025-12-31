@@ -4,7 +4,8 @@ const data = {
   email: "apg@hotmail.com",
   schedule: "Lunes a viernes de 8:00 a 18:00",
   experience: "Con 25 años de experiencia, somos tu mejor opción en instalaciones eléctricas y mantenimiento",
-  logo: "/images/LogoAPG.png",
+  logoBlack: "/images/APGdark.png",
+  logoWhite: "/images/APGwhite.png",
   aboutIt:
     "Especialistas en instalaciones eléctricas y mantenimiento industrial. Calidad garantizada y servicio profesional.",
   services: [

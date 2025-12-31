@@ -3,16 +3,16 @@ import './Nav.css';
 export const changeTheme = () => {
   const themeBtn = document.querySelector("#themeBtn");
   themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+    document.body.classList.toggle("white");
     changeText();
   });
 };
 export const changeText = () => {
   const themeBtn = document.querySelector("#themeBtn");
-  if (themeBtn.innerText === "☾") {
-    themeBtn.innerText = "💡";
-  } else {
+  if (themeBtn.innerText === "💡") {
     themeBtn.innerText = "☾";
+  } else {
+    themeBtn.innerText = "💡";
   }
 };
 
@@ -25,7 +25,7 @@ const Nav = (links) => `
         </li>
         `).join("")}
          <li>
-        <button id="themeBtn">☾</button>
+        <button id="themeBtn">💡</button>
         </li>
     </ul>
   </nav>

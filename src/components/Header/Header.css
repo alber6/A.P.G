@@ -1,6 +1,7 @@
 header{
+  background-color: #2e4480;
   /* position: fixed; */
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

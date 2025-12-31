@@ -10,7 +10,7 @@ nav > ul > li > a {
     transition: color 0.3s ease;
     position: relative;
 }
-.dark nav > ul > li > a {
+.white nav > ul > li > a {
     color: var(--primary-dark);
 }
 

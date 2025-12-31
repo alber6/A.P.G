@@ -1,8 +1,8 @@
 :root {
-  --primary-dark: whitesmoke;
-  --bg-dark: #111111;
-  --primary-light: #272727;
-  --bg-light: whitesmoke;
+  --primary-dark: #000000;
+  --bg-dark: rgb(0, 0, 0);
+  --primary-light: rgb(255, 255, 255);
+  --bg-light: #ffffff;
   --highlight: #00a8cc;
 }
 
@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   /* overflow-x: hidden; */
 }
-.dark {
-  color: var(--bg-light);
+.white {
+  color: var(--bg-dark);
   background-color: var(--primary-light);
 }

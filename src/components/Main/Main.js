@@ -12,7 +12,8 @@ const AboutIt = () =>{
       ${Button("btn", "Solicitar presupuesto", "")}
     </div>
   </div>
-  <img src="${data.logo}" alt="Logo APG"/>
+  <img src="${data.logoBlack}" alt="Logo APG" id="dark-logo"/>
+  <img src="${data.logoWhite}" alt="Logo APG" id="white-logo"/>
   `
 };
 
@@ -38,7 +39,6 @@ const Main = () =>{
     ${AboutIt()}
   </section>
   <section id="services">
-    <h1>Nuestros servicios</h1>
     ${Works()}
   </section>
 `
