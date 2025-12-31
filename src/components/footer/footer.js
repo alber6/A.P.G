@@ -6,7 +6,7 @@ export const Footer = () => `
 <div id="presupuesto">
     <h2>¿Necesitas un presupuesto?</h2>
     <p>${data.experience}</p>
-    <a href="tel:+34123456789">
+    <a href="tel:${data.phoneNumber}">
         ${Button("btn", "LLamar ahora", "")}
     </a>
 </div>
